@@ -1,0 +1,65 @@
+Milo/eBay Recruiting Engineering Challenge
+
+== Background ==
+Many merchants expose in-store availability data to the web in a way that browsers can easily access,
+but is often inconvenient for programs to parse. Rather than asking them to build a formal API,
+it's usually easier to build directly to their web site.
+
+== Problem ==
+Write a program that accepts as its arguments, a ZIP code and a Macys.com offer URL
+and will print the store availability for the closest 8 stores around the ZIP code centroid.
+
+ For example:
+
+./my_program 94403 "http://www.macys.com/catalog/product/index.ognc?ID=355333"
+
+Macy's Hillsdale
+115 Hillsdale Mall/ San Mateo, CA 94403
+LIMITED
+
+Macy's Hillsdale Furniture
+2838 South El Camino Real/ San Mateo, CA 94403
+AVAILABLE
+
+Macy's Stanford
+300 Stanford Mall/ Palo Alto, CA 94304
+LIMITED
+
+Macy's Serramonte
+1 Serramonte Drive/ Daly City, CA 94105
+NOT AVAILABLE
+
+Macy's Southland
+800 Southland Mall/ Hayward, CA 94545
+NOT AVAILABLE
+
+Macy's Bay Fair
+15555 E. 14th Street / San Leandro , CA 94578
+NOT AVAILABLE
+
+Macy's Union City Furniture Clearance
+1200 Whipple Road / Union City , CA 94587
+NOT AVAILABLE
+
+Macy's Stonestown Galleria
+3251 20th Avenue / San Francisco , CA 94132
+LIMITED
+
+The precise output formatting is not important, so long as the store name, address, and
+availability information are printed. You may use any programming language you wish.
+
+If the URL given to your program is not for a locally available product, your program should
+print a message describing the error and exit.
+
+We will judge submissions based on these metrics:
+  - Non-I/O CPU usage
+  - Number of HTTP requests
+  - End-to-end execution speed
+  - Readability, structure, and error handling
+
+== Bonus ==
+To truly distinguish your submission, you can choose to handle product variations.
+Most apparel products come in different sizes and colors, which are tracked as
+different Stock-Keeping Units (SKUs), but represented as the same logical "product".
+For a bonus, your program may optionally accept variational information on the
+command line, and return the availability for that particular variation.
